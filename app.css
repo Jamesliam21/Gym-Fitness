@@ -1,0 +1,176 @@
+*{
+    font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
+}
+/* gobal color */
+:root{
+    --first-color: #0d6efd;
+    --second-color:#dc3545;
+    --third-color:#ffffff;
+    --fourth-color:#fd7e14;
+}
+/* navigation */
+nav{
+    background: linear-gradient(to left, var(--first-color),var(--second-color));
+}
+
+body{
+    background: linear-gradient(to left, var(--first-color),var(--second-color));
+    overflow-x: hidden;
+}
+
+/* header */
+#header{
+    width: 100%;
+    min-height: 95vh;
+    position: relative;
+}
+#header video{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -2;
+}
+#header .overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    background: linear-gradient(to left, var(--first-color),var(--second-color));
+    mix-blend-mode: overlay;
+    z-index: -1; /* video have z-index, if can't give z-index for this overlay, you can't select text.So give z-index */
+}
+/* custom */
+.sub-heading{
+    font-size: 2rem;
+    color: var(--fourth-color);
+    text-align: center;
+}
+.main-heading{
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+}
+.heading-line{
+    width: 100px;
+    height: 2px;
+    background-color: var(--fourth-color);
+    margin: 30px auto;
+}
+/* service */
+.service-left img{
+    height: 400px;
+    object-fit: cover;
+}
+.service-card img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.service-card p{
+    margin: 0;
+}
+.service-card img:hover{
+    transform: scale(1.05);
+}
+/* plan card */
+.plan-2{
+    position: relative;
+    overflow: hidden;
+}
+.recommended{
+    position: absolute;
+    width: 200px;
+    background: var(--third-color);
+    color: black;
+    font-size: 0.9rem;
+    top: 20px;
+    right: -50px;
+    transform: rotate(30deg);
+}
+/* testimonial */
+#testimonial img{
+    height: 320px;
+    object-fit: cover;
+    width: 100%;
+}
+.carousel-control-prev{
+    position: absolute;
+    left: -8%;
+}
+.carousel-control-prev-icon{
+    width: 25px;
+    height: 30px;
+    background-color:var(--fourth-color);
+}
+.carousel-control-next{
+    position: absolute;
+    right: -8%;
+}
+.carousel-control-next-icon{
+    width: 25px;
+    height: 30px;
+    background-color:var(--fourth-color);
+}
+/* news */
+#news img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 3px solid white;
+    transition: 0.5s;
+   
+}
+#news img:hover{
+    transform: scale(1.05);
+}
+/* FAQ Section */
+.accordion-button:not(.collapsed){
+    background: var(--fourth-color);
+    color: white;
+}
+/* contact */
+#contact{
+    background-image: url(images/comtact1.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.9;
+    background-position: center;
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+/* footer */
+#footer ul{
+    list-style-type: none;
+    
+}
+#footer ul li{
+    padding: 10px 0;
+}
+/* up-arrow */
+.up-arrow{
+     display: block; /* inline element */
+    width: 30px;
+    height: 40px;
+    background: var(--second-color);
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    align-items: center;
+    border-radius: 2px;
+}
